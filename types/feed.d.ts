@@ -46,9 +46,9 @@ export interface NormarlizedFeedData {
   updated_at: string;
   last_feed_entry_at: string;
   last_entry_id: number;
-  ambientTemperature: string;
-  humidity: string;
-  bodyTemperature: string;
-  heartBeatRate: string;
-  bloodOxygenLevel: string;
+  ambientTemperature: number;
+  humidity: number;
+  bodyTemperature: number;
+  heartBeatRate: number;
+  bloodOxygenLevel: number;
 }
