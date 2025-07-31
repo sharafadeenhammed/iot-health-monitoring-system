@@ -10,12 +10,12 @@ const normalizeFeedData = (feed: Feed): NormarlizedFeedData => {
     field3Name: "Body Temperature",
     field4Name: "Heart Beat Rate Per Minite",
     field5Name: "Blood Oxygen Level",
-    ambientTemperature: Number(feed.feeds[ 0 ].field1),
-    entryId: Number(feed.feeds[ 0 ].entry_id),
-    humidity: Number(feed.feeds[ 0 ].field2),
-    bodyTemperature: Number(feed.feeds[ 0 ].field3),
-    heartBeatRate: Number(feed.feeds[ 0 ].field4),
-    bloodOxygenLevel: Number(feed.feeds[ 0 ].field5)
+    entryId: Number(feed.feeds[ 0 ].entry_id || 0),
+    ambientTemperature: Number(feed.feeds[ 0 ].field1 || 0),
+    humidity: Number(feed.feeds[ 0 ].field2 || 0),
+    bodyTemperature: Number(feed.feeds[ 0 ].field3 || 0),
+    heartBeatRate: Number(feed.feeds[ 0 ].field4 || 0),
+    bloodOxygenLevel: Number(feed.feeds[ 0 ].field5 || 0)
   };
   return data;
 }
