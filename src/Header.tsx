@@ -3,13 +3,17 @@ import moment from "moment";
 
 interface HeaderProps {
   updatedAt?: string;
+  entryId?: number;
 }
-function Header({ updatedAt }: HeaderProps) {
+function Header({ updatedAt, entryId }: HeaderProps) {
   return (
     <div className='sticky top-0 left-0 right-0 py-14 px-5 bg-blue-950 text-slate-300 rounded-b-[20px]'>
       {updatedAt ? (
-        <p className='font-mono absolute top-2 right-2 text-right sm:text-center'>
+        <p className='font-mono absolute top-1 right-2 text-right sm:text-center'>
           Last reading updated: {moment(updatedAt).fromNow()}
+          {entryId ? (
+            <p className='text-[10px] text-right'>entry count: {entryId} </p>
+          ) : null}
         </p>
       ) : null}
       <div className='flex justify-between items-start '>

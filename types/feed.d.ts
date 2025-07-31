@@ -36,6 +36,7 @@ export interface NormarlizedFeedData {
   field3: string;
   field4: string;
   field5: string;
+  entryId: number;
   field1Name: "Ambient Temperature";
   field2Name: "Humidity";
   field3Name: "Body Temperature";

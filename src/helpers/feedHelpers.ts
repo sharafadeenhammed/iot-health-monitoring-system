@@ -11,6 +11,7 @@ const normalizeFeedData = (feed: Feed): NormarlizedFeedData => {
     field4Name: "Heart Beat Rate Per Minite",
     field5Name: "Blood Oxygen Level",
     ambientTemperature: feed.feeds[ 0 ].field1,
+    entryId: feed.feeds[ 0 ].entry_id,
     humidity: feed.feeds[ 0 ].field2,
     bodyTemperature: feed.feeds[ 0 ].field3,
     heartBeatRate: feed.feeds[ 0 ].field4,
