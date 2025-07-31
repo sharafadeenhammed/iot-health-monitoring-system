@@ -4,6 +4,7 @@ import type { Feed, NormarlizedFeedData } from "../../types/feed"
 const normalizeFeedData = (feed: Feed): NormarlizedFeedData => {
   const data: NormarlizedFeedData = {
     ...feed.channel,
+    last_feed_entry_at: feed.feeds[ 0 ].created_at,
     field1Name: "Ambient Temperature",
     field2Name: "Humidity",
     field3Name: "Body Temperature",

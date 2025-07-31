@@ -43,6 +43,7 @@ export interface NormarlizedFeedData {
   field5Name: "Blood Oxygen Level";
   created_at: string;
   updated_at: string;
+  last_feed_entry_at: string;
   last_entry_id: number;
   ambientTemperature: string;
   humidity: string;
