@@ -1,4 +1,3 @@
-import type React from "react";
 import type { JSXElementConstructor } from "react";
 export type status =
   | "NORMAL"
