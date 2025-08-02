@@ -32,8 +32,8 @@ const validateBodyTemperature = (bodyTemperature: number | undefined): status =>
 // validate humidity reading with status
 const validateHumidity = (humidity: number | undefined): status => {
   if (humidity === undefined || humidity <= 0) return "NEUTRAL";
-  if (humidity >= 35 && humidity <= 60) return "NORMAL";
-  if (humidity > 65) return "HIGH";
+  if (humidity >= 35 && humidity <= 70) return "NORMAL";
+  if (humidity > 70) return "HIGH";
   if (humidity < 30) return "LOW";
   return undefined;
 }
