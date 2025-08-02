@@ -56,7 +56,7 @@ function Card({
               // style={{ letterSpacing: "1px" }}
               className='border-2 border-white text-white rounded-2xl text-right px-1 py-[3px] text-[8px] font-bold '
             >
-              {value === 0 || value === undefined ? "--- | ---" : status}
+              {status === undefined ? "--- | ---" : status}
             </p>
           </div>
         </div>
