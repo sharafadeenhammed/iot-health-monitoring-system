@@ -22,7 +22,7 @@ function App() {
 
     // fetch feed data in 5s interval
     const timeout = setInterval(() => {
-      // fetchFeed();
+      fetchFeed();
     }, 5000);
 
     return () => clearInterval(timeout);
