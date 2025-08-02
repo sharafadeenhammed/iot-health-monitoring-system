@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animateLow {
+  animation-name: animatelow;
+  animation-duration: 1000ms;
+  animation-timing-function: linear; /*cubic-bezier(0.075, 0.82, 0.165, 1); */
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+.animateHigh {
+  animation-name: animatehigh;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+.animateAbnormal {
+  animation-name: animateabnormal;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animatelow {
+  25% {
+    transform: scale(0.985);
+  }
+  50% {
+    transform: scale(0.985);
+  }
+  75% {
+    transform: scale(1);
+  }
+}
+@keyframes animatehigh {
+  25% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-0.5deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animateabnormal {
+  25% {
+    transform: translate(3px);
+  }
+  50% {
+    transform: translate(-3px);
+  }
+  75% {
+    transform: translate(0px);
+  }
+}
